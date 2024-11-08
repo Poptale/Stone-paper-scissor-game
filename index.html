@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Stone paper scissor game</title>
+</head>
+<body>
+    <div class="dot" data-cursor-dot></div>
+    <div class="outline" data-cursor-outline></div>
+    <h1>Stone paper scissor</h1>
+    <div class="Choices-container">
+        <div class="choices" id="rock" onclick="stoneSound.currentTime = 0; stoneSound.play();">
+            <img src="rock.png" alt="rock">
+        </div>
+        <div class="choices" id="paper" onclick="paperSound.currentTime = 0; paperSound.play();">
+            <img src="paper.png" alt="paper">
+        </div>
+        <div class="choices" id="scissor" onclick="scissorSound.currentTime = 0; scissorSound.play();">
+            <img src="scissors.png" alt="scissor">
+        </div>
+    </div>
+
+    <div class="score-board">
+        <div class="user-score">
+            <p id="user-score">0</p>
+            <p>You</p>
+
+        </div>
+        <div class="computer-score">
+            <p id="computer-score">0</p>
+            <p>Me</p>
+        </div>
+    </div>
+
+    <div class="result-container">
+        <div class="result">
+            <p id="result">Pick one of them</p>
+        </div>
+        
+        
+    </div>
+    <div class="clearBtnContainer">
+        <button class = "clearBtn" 
+        onclick="
+        userScore = 0;
+        userScoreParagraph.innerText = userScore;
+        compScore = 0;
+        computerScoreParagraph.innerText = compScore;
+        result.innerText = 'Pick one of them';
+        ">Clear
+        </button>
+        
+    </div>
+
+
+<script src="main.js"></script>
+</body>
+</html>
